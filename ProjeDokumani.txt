@@ -1,0 +1,637 @@
+Kurumsal Web Arayüz Tasarım Planı
+Amaç ve Kapsam: Bu plan, saha personelinin öncelikli kullanıcısı olduğu kurumsal bir web uygulamasının tüm görsel arayüz tasarım detaylarını tanımlar. Giriş ekranından çıkış (logout) işlemine kadar, kullanılacak renk paletinden navigasyon menüsüne, sayfa yapılarından buton ve tipografi stillerine kadar her öğe profesyonel bir yaklaşımla adım adım ele alınmıştır. Tasarım, basitlik ve tutarlılık ilkelerini temel alarak kullanıcı dostu ve kurumsal bir deneyim sunmayı hedefler
+sirius.com.tr
+sirius.com.tr
+. Bu arayüz şimdilik masaüstü (bilgisayar) ortamı için tasarlanacak olup, ileride farklı cihazlar için duyarlı (responsive) hale getirilebilir.
+1. Renk Paleti ve Kurumsal Stil
+Kurumsal bir arayüz için renk paleti, marka kimliğini yansıtan ve gözü yormayan, birkaç temel renkten oluşmalıdır. İyi bir tasarım dengesi için en fazla üç ana renk kullanılmalıdır (bir ana, bir ikincil, bir vurgu)
+selmancom.medium.com
+. Seçilen renkler, proje temasına uygun olarak güven ve doğayı çağrıştıracak şekilde belirlenmiştir (saha personeli uygulamasının çevresel bir proje olması da göz önünde bulundurularak):
+Birincil Renk (Kurumsal Ana Renk): Örneğin güven veren koyu mavi tonu (ör. #1E5A7D). Mavi, kurumsal ortamlarda sıkça tercih edilir ve sakinlik ile güvenilirlik hissi verir
+selmancom.medium.com
+. Bu renk navigasyon çubuğu arkaplanı, başlık çubukları ve birincil butonlar gibi kritik öğelerde kullanılacak.
+İkincil Renk (Tamamlayıcı Renk): Birincile uyumlu soft bir ton, örneğin toprak tonlu petrol yeşili veya turkuaz (#3A847C). Yeşil ve turkuaz tonları doğa ve tazelik çağrışımı yapar
+selmancom.medium.com
+, projeye çevreci bir hava katar. İkincil renk; sekmeler, vurgulanmış arka plan alanları (örneğin kart veya bildirim arkaplanı) ve ikincil butonlar gibi öğelerde kullanılacak.
+Vurgu Rengi (Accent Renk): Dikkat çekmek için kullanılan kontrast bir renk. Örneğin turuncu veya kırmızı ton (#E67E22 turuncu ya da hata/uyarı için #E74C3C kırmızı). Bu renk, uyarı mesajları, kritik ikonlar veya onay gerektiren butonlar için sınırlı oranda (%10 kuralı ile) kullanılacaktır
+selmancom.medium.com
+. Özellikle kırmızı, tehlike ve hata durumlarını belirtmek için etkili bir seçimdir (tehlike algısı yaratır)
+selmancom.medium.com
+.
+Nötr Renkler: Arayüzün genel arkaplanı ve metinleri için nötr tonlar kullanılacak. Arkaplanlar için beyaz veya çok açık gri (#F9F9F9 gibi) tercih edilerek içerik ön plana çıkarılacak. Metin renkleri koyu füme veya siyahımsı gri (#333333) olmalı ki kontrast yüksek olup okunaklı olsun. Tam siyah yerine çok koyu gri tonları kullanmak daha doğal bir görünüm verir (saf siyah yerine az doygunluk içeren koyu tonlar tercih edilmeli)
+selmancom.medium.com
+.
+Durum Renkleri: Sistem geri bildirimleri için standart renkler belirlenecek: Başarılı işlemler için yeşil (#28a745 gibi), uyarılar için sarı/turuncu (#FFC107 gibi) ve hatalar için kırmızı (#DC3545 gibi). Bu renkler, form hata mesajları, bildirim ikonları veya durum rozetlerinde tutarlı şekilde kullanılacak.
+Not: Renk kullanımında %60-30-10 dengesi uygulanacaktır
+selmancom.medium.com
+. Arayüzde renklerin ~%60’ını nötr/ana renk alanları, %30’unu ikinci renk tonları, %10’unu ise vurgu (accent) renkleri oluşturacak şekilde bir dağılım hedeflenir. Bu sayede arayüz hem canlı hem de kurumsal ciddiyetini koruyan dengeli bir görünüme kavuşur.
+2. Tipografi ve Yazı Stili
+Kurumsal bir kimlik için tipografi, sade ve okunaklı olmalıdır. Saha personeli uygulamasında açık ve net yazılar kritik olduğu için modern, sans-serif bir yazı tipi tercih edilmelidir. Önerilen font örnekleri: Roboto, Open Sans veya Helvetica Neue gibi Türkçe karakter desteği iyi, ekranlarda rahat okunabilen fontlar. Tüm arayüzde tek bir yazı tipi ailesi kullanarak tutarlılık sağlanmalıdır
+sirius.com.tr
+ (başlık ve gövde metinlerinde sadece kalınlık ve boyut farklarıyla hiyerarşi verilecek).
+Başlık Yazı Tipi ve Boyutları: En üst seviye başlıklar (sayfa başlıkları) belirgin olmalı. Örneğin, H1 başlıklar ~24px kalın (bold) ve birincil renk tonuyla; H2 başlıklar ~20px yarı kalın; alt başlıklar (H3) ~18px normal kalınlıkta olabilir. Başlıkların yazı rengi genel metin rengiyle aynı koyu tonda, ancak önemli başlıklar birincil renk ile de vurgulanabilir.
+Gövde Metni Boyutu: Standart metin boyutu en az 14px olmalıdır (tercihen 15–16px, çünkü saha personeli için okunabilirlik önemlidir). 14-16px aralığı, masaüstü ekranlarda konforlu okuma sağlar. Paragraflar ve açıklama metinleri bu boyutta, renk olarak koyu gri (#333) kullanılacak.
+Yardımcı Metin ve Etiketler: Form etiketleri, tablo başlıkları veya açıklayıcı ipuçları gibi daha küçük metinler için ~12px kullanılabilir. Ancak 12px altına inmek (ör. 10px) masaüstünde bile okunurluğu azaltabilir, bu yüzden minimum 12px alt sınır olmalı.
+Yazı Ağırlıkları ve Stil: Başlıklar genel olarak bold (700) veya semi-bold (600) kullanılacak, gövde metinleri normal ağırlık (400). Vurgu yapılacak kelimeler veya linkler için italik veya altı çizili stil yerine birincil renk ve/veya yarı kalın stil kullanılabilir (örneğin linkler kurumsal mavi renkte, hover olunca altı çizili).
+Satır Aralıkları: Okunabilirliği artırmak için satır yüksekliği gövde metninde yaklaşık 1.5 (150%) satır yüksekliği kullanılacak. Başlıkların altında da biraz boşluk bırakılarak metin blokları arasında net ayrım sağlanacak.
+Tipografi seçiminde temel amaç, farklı rol ve ortamda kullanacak herkesin (özellikle saha personelinin) hızlı okuyup anlayabileceği bir yazı düzeni oluşturmaktır. Kontrast yüksek, font boyutları yeterli ve tutarlı oldukça arayüzün kullanım kolaylığı artacaktır
+sirius.com.tr
+.
+3. Navigasyon (Üst Menü) Tasarımı
+Navigasyon çubuğu (Navbar), her sayfada tepe kısımda sabit olarak yer alacak ve kullanıcıların sitede kolay gezinmesini sağlayacaktır. Kurumsal bir arayüzde üst menü sade, anlaşılır ve marka kimliğini taşıyan bir yapıda olmalıdır. Navigasyon tasarımında öncelik, saha personelinin ihtiyaç duyduğu ana bölümlere hızlı erişim sağlamaktır. Menü öğeleri ve düzeni, kullanıcıların alışık olduğu şekilde konumlandırılmalıdır
+sirius.com.tr
+:
+Logo ve Uygulama Adı: Sol üst köşede şirketin veya projenin logosu yer alacak. Logonun yanında uygulamanın ismi (örneğin "EcoMarineAI Sistemi" gibi) kurumsal yazı stiliyle yazılabilir. Bu kısım, markalama amacıyla birincil renk arkaplan üzerinde beyaz logo veya tersi şekilde sunulacak.
+Ana Menü Öğeleri: Logonun sağında, uygulamanın ana sayfalarına yönlendiren menü sekmeleri bulunacak. Saha personeli odaklı düşünerek en önemli menü öğesi "Görevlerim" (saha personelinin görev listesi) olacaktır. Diğer menü öğeleri şunlar olabilir:
+Ana Sayfa (Dashboard) – Genel bakış ekranı.
+Görevler – Tüm görev/olay listesi.
+Raporlar – Analizler ve raporlama ekranı (yönetici/direktörler de kullanabilir).
+Harita – (Opsiyonel) Olayların harita üzerinde gösterimi, saha personeli konumları (eğer proje konum bazlı çalışıyorsa).
+İletişim/Destek – (Opsiyonel) Destek veya iletişim sayfası.
+Menü öğeleri kısa ve anlaşılır kelimelerden oluşmalı. Her bir sekme, üzerine gelince (hover) hafif renk değişimiyle vurgulanacak (örneğin açık ton highlight). Aktif olduğu sayfayı göstermek için sekme üzerinde alt çizgi veya farklı bir arkaplan tonu kullanılabilir.
+Arama (Opsiyonel): Eğer sistem içeriğinde hızlı arama ihtiyacı olacaksa (örneğin görev veya kayıt araması), menü bar ortasında veya sağ tarafında bir büyüteç ikonu ile arama çubuğu sunulabilir. Kurumsal arayüzlerde arama, kullanıcı deneyimini iyileştiren bir öğedir ancak eğer saha personeli için kritik değilse eklemeyebiliriz.
+Bildirim İkonu: Saha personellerine gelen gerçek zamanlı bildirimler (yeni görev ataması, acil durum vs.) için üst menünün sağ tarafında bir bildirim zili ikonu yer almalı. Bu ikona tıklandığında, son bildirimlerin listelendiği küçük bir açılır pencere (dropdown) görünecek. Bildirim sayısı varsa ikon üzerinde küçük bir kırmızı sayaç rozeti ile gösterilecek.
+Kullanıcı Profil Menüsü: En sağ tarafta kullanıcının ismi ve/veya profil fotoğrafı (avatar) bulunacak. Kullanıcının adına tıklandığında bir açılır menü ile "Profilim", "Ayarlar" ve "Çıkış Yap" seçenekleri gösterilecek. Bu kısım sayesinde kullanıcı, hesap ayarlarına veya çıkış yapma işlemine her sayfadan erişebilecek.
+Dil Seçimi (Opsiyonel): Kurum içi kullanılsa bile çok dilli destek gerekebilir; sağ üstte küçük bir dil değiştirme menüsü (ör. "TR | EN") düşünülebilir. Şimdilik proje Türkçe odaklı olduğu için öncelik değil.
+Navigasyon çubuğu tasarımında arka plan rengi olarak birincil kurumsal renk (koyu mavi ton) kullanıp, metinleri ve ikonları kontrast yaratması için beyaz yapacağız. Menü yazılarının fontu, genel tipografi ile aynı fakat biraz daha küçük veya aynı boyutta (14-16px) ve yarı kalın olacak ki hem okunaklı hem de belirgin dursun. Menü genelinde gezinme deneyimi tutarlı olmalı; tüm sayfalarda aynı menü yapısı korunmalı, öğelerin yeri değişmemelidir
+sirius.com.tr
+.
+4. Altbilgi (Footer) Tasarımı
+Kurumsal arayüzün altbilgi (footer) bölümü, sayfanın en altında yer alarak kurumsal bilgileri ve ikincil navigasyon öğelerini barındırır. Footer her sayfada tutarlı olarak görünecek ve site genelinin tamamlayıcı unsuru olacaktır. Kurumsal bir site için altbilgide bulunması gerekenler ve tasarım detayları şöyledir:
+Tasarım ve Renk: Footer arka planı, navigasyon ile uyumlu ancak ondan ayrışan bir renk olmalı. Örneğin, daha koyu bir füme gri veya birincil rengin çok koyu bir tonu kullanılabilir. Bu koyu arka plan üzerinde metinler açık gri/beyaz renkte gösterilecek. Yazı tipi boyutu, üst bölümden biraz daha küçük (örneğin 12px) olabilir.
+Kurumsal Kimlik ve Telif: Footer’ın en altında şirket adı ve telif hakkı bilgisi yer alacak. Örneğin: “© 2025 [Şirket Adı]. Tüm hakları saklıdır.” gibi bir ifade.
+İletişim Bilgileri: Kurumun iletişim adresi, telefon numarası ve e-posta adresi footer’da listelenebilir. Bu bilgiler küçük ikonlarla (📞, ✉️, 📍 gibi) desteklenerek görsel olarak ayrılabilir. Saha personeli arayüzü olsa da, uygulamayı kullananlar ihtiyaç halinde destek için bu bilgilere başvurabilir.
+Hızlı Linkler: Footer, üst menüde yer almayan veya ikincil öneme sahip sayfalara linkler içerebilir. Örneğin Hakkında, Yardım, Gizlilik Politikası, Kullanım Şartları gibi kurumsal sayfa bağlantıları burada bulunabilir. Bu linkler genellikle daha küçük fontla, dikey liste veya yatay olarak virgülle ayrılmış şekilde verilir.
+Logo: Eğer kurumsal gereksinim varsa, footer’da da şirket logosunun küçük bir versiyonu kullanılabilir. Genellikle bu logo tek renk (white monochrome) olarak, footer’ın en altına veya köşesine yerleştirilir.
+Sosyal Medya İkonları (Opsiyonel): Kurumun sosyal medya hesapları varsa (LinkedIn, Twitter vb.), küçük ikonlar halinde footer’da yer alabilir. Kurumsal iç uygulamada genelde gerekmeyebilir, ancak halka açık bir arayüz olsaydı önemli olurdu.
+Footer içeriği genel olarak kısa tutulmalı ve arayüzün dengeli görünmesi için yeterli boşluklarla tasarlanmalıdır. Kullanıcı sayfayı aşağı kaydırdığında footer, sayfanın sonlandığını net şekilde gösteren bir son blok işlevi görecek. Renk paleti ve tipografi, footer’da da genel tasarımla uyumlu şekilde kullanılacak (örn. linkler üzerine gelince birincil renge dönen, altı çizili metinler gibi tutarlılıklar korunacak).
+5. Sayfa Planlaması ve İçerik Detayları
+Arayüzün kaç sayfadan oluşacağı ve her sayfanın hangi öğeleri içereceği, kullanıcı ihtiyaçları ve uygulama işlevlerine göre belirlenmiştir. Saha personeli odaklı bu uygulamada temel sayfalar ve içerikleri şu şekilde planlanmıştır:
+Giriş Sayfası (Login)
+Amaç: Kullanıcıların sisteme güvenli bir şekilde giriş yapmasını sağlamak. Bu, uygulamanın ilk izlenimini veren sayfa olduğu için basit ve anlaşılır olmalıdır.
+Tasarım: Ortalanmış bir giriş formu bulunur. Sayfanın üst kısmında şirketin/uygulamanın logosu büyük boyutta yer alır, altında “Hoş geldiniz” tarzı kısa bir mesaj veya uygulamanın mottosu gri tonda yazılabilir (opsiyonel).
+Form Elemanları: İki temel giriş alanı olacaktır: Kullanıcı Adı/E-posta ve Şifre. Her bir input alanının üstünde açıklayıcı bir etiket yer alır (örn. "Kullanıcı Adı" ve "Şifre"). Etiketler açık ve anlaşılır olmalı, alanlar karışıklığa mahal vermemelidir. (Örneğin "Kod" gibi belirsiz kelimeler kullanılmaz, doğrudan "Şifre" denir)
+justinmind.com
+.
+Buton: Formun altında belirgin bir "Giriş Yap" butonu bulunur. Bu buton birincil renkle (koyu mavi ton) doldurulmuş, beyaz yazılı ve orta boyutta (ör. 16px metin) olacaktır. Butonun genişliği form alanlarına hizalı ve yeterince büyük olmalı ki kolay tıklanabilsin. Tek bir ana eylem (Login) olduğu için bu buton ön plandadır.
+Ek Seçenekler: Gerekliyse "Beni Hatırla" (checkbox) ve "Şifremi Unuttum" linki form alanlarının altında daha küçük puntolarla yer alabilir. "Şifremi Unuttum" linki tıklandığında şifre sıfırlama adımına götürür. Bu link birincil renkte metin ile gösterilerek fark edilir kılınır.
+Hata Mesajları: Kullanıcı yanlış bilgi girerse, ilgili input altında kırmızı renkte kısa bir hata mesajı gösterilecek (ör. "Hatalı şifre, lütfen tekrar deneyin."). Hata mesajları anlaşılır olmalı (“Giriş başarısız” gibi belirsiz yerine "Şifre yanlış, lütfen tekrar deneyin" gibi net ifadeler kullanılmalı)
+justinmind.com
+. Ayrıca invalid alanlar kırmızı bir kenarlık veya ikon ile işaretlenerek görsel geri bildirim sağlanır.
+Genel Stil: Giriş sayfasının arka planı sade açık renk (beyaz) bırakılabilir veya kurumsal kimliği yansıtan silik bir görsel kullanılabilir (örneğin deniz temalı hafif bir arka plan görseli, opaklığı düşürülmüş şekilde). Ancak dikkat dağıtmamak için çok karmaşık görsel kullanmaktan kaçınılır. Sayfanın genelinde birkaç kritik öğe dışında başka içerik olmayacak, böylece kullanıcı sadece giriş işlemine odaklanacaktır.
+Ana Sayfa (Gösterge Paneli / Dashboard)
+Amaç: Kullanıcı giriş yaptıktan sonra karşısına gelen özet niteliğindeki paneldir. Saha personeli için önemli bilgilerin hızlıca görülebilmesini sağlar. Bir bakışta kullanıcının neleri yapması gerektiğini ve sistemin mevcut durumunu gösterir.
+Kişiselleştirme: Üstte, kullanıcıyı karşılayan bir mesaj yer alabilir: Örneğin “Hoş geldin, Ahmet!” şeklinde kullanıcı adıyla hitap eden bir başlık. Bu, uygulamanın sıcak ve kişisel bir dokunuş katmasını sağlar.
+Genel Düzen: Dashboard, içerikleri kartlar veya bölümler halinde grid yapıda sunar. Ekranın üst bölümünde bir özellik özeti paneli olabilir. Örneğin:
+Görev Özeti Kartı: "Aktif Görevlerim" başlıklı bir kart içinde kullanıcının şu an kaç açık görevi olduğu, yakındaki son teslim süreleri vb. listelenir. Örn: “Şu an 5 aktif göreviniz var, 2’si yüksek öncelikli.”
+Bildirimler/Raporlar Kartı: Son gelen önemli bildirimler veya güncellemeler (örn. "3 yeni sensör alarmı alındı") gösterilebilir.
+İstatistikler: Eğer saha personeli performans veya çevresel veriler önemliyse, basit grafikler bulunabilir. Örneğin, son 7 günde tespit edilen kirlilik olaylarını gösteren bir küçük grafik veya son ayın görev tamamlama oranı gibi KPI (anahtar performans göstergesi) kartları.
+Harita Özeti: Proje deniz kirliliği izleme ile ilgili olduğu için, dashboard’da küçük bir harita modülü yer alabilir. Bu haritada son raporlanan kirlilik konumları veya cihazların konumları küçük noktalarla belirtilir. Kullanıcı bu haritayı büyütüp detay görmek isterse “Harita” sayfasına yönlendiren bir buton veya link konulur.
+Düzenleme ve Navigasyon: Her kartın veya bölümün köşesinde ilgili sayfaya gitmeyi sağlayan bir "Detaylar" linki olabilir (örn. Aktif görevler kartında "Tüm görevlerimi gör"). Bu sayede kullanıcı dashboard’dan ilgili bölüme kısayolla geçebilir.
+Tasarım Detayları: Dashboard sayfası, bilgi yoğun olabileceğinden düzenli ve ferah tasarlanmalı. Her bilgi kartı arasında boşluklar bırakılarak göz yorgunluğu önlenir. Arka plan her zamanki gibi açık renkte, kartlar beyaz kutular şeklinde hafif gölgeli (yükseltilmiş görünüm için) sunulur. Başlıklar bold, içerikler normal fontla listelenir. Önemli sayılar veya yüzde değerleri varsa bunlar birincil veya ikincil renkle vurgulanabilir.
+Örnek İçerik Blokları:
+"Kısa Yol Butonları": Saha personelinin sık kullandığı işlemler için (ör. “Yeni Görev Başlat” ya da "Rapor Oluştur") dashboard’da ikonlu butonlar konulabilir. Bu butonlar büyük kart şeklinde, birincil renkle dikkat çekici tasarlanır.
+"Duyurular": Kurum içi önemli duyurular ya da sistem mesajları varsa, dashboard’un bir köşesinde gösterilebilir (ör. planlı bakım zamanları, yeni bir özellik bilgilendirmesi).
+Adaptasyon: Eğer farklı rol (yönetici vs.) bu sayfayı kullanırsa, gösterilen kartlar o role göre farklılık gösterebilir (yönetici tüm ekibin istatistiklerini görürken saha personeli sadece kendininkini görür). Tasarım bu esnekliği göz önünde bulundurur ancak genel düzen aynı kalır.
+Görev Listesi Sayfası (Saha Görevleri)
+Amaç: Saha personeline atanan veya onun oluşturduğu tüm görevlerin listelenmesi ve yönetilmesi. Bu sayfa, iş akışının kalbi olacak; bu yüzden önceliklendirme ve filtreleme imkanları sunulmalıdır.
+Liste Görünümü: Görevler tablo veya kart listesi biçiminde sunulabilir. Kurumsal uygulamalarda tablo görünümü verilerin karşılaştırılmasını kolaylaştırdığı için iyi bir seçenektir. Başlık satırı sabit, altında her görev bir satır:
+Sütun örnekleri: Görev ID, Açıklama (kısa bir özet), Konum (metin veya küçük bir konum ikonu), Öncelik (renk kodlu: yüksek için kırmızı nokta, orta için turuncu, düşük için yeşil gibi), Durum (Açık, Devam, Tamamlandı gibi etiketler), Son Tarih.
+Her satırın sonunda bir "Detaylar" butonu (veya tıklanabilir satır) olmalı ki görevin detay sayfasına geçilsin. Satır üzerine gelince arka plan hafif gri highlight olacak, tıklanabilir olduğu anlaşılsın.
+Kart Görünümü: Alternatif olarak, özellikle daha görsel bir tercih istenirse kartlar şeklinde listelenebilir (her görev bir kart kutusu, başlık ve bir iki kritik bilgi ile). Ancak çok sayıda görev varsa tablo daha kompakt olacaktır. Belki bir "Liste/Kart görünümü değiştir" seçeneği sunulabilir.
+Filtre ve Arama: Listenin üst kısmında filtreler yer alır. Saha personeli için özellikle duruma göre filtre önemlidir (örn. "Sadece Açık Görevler"). Ayrıca tarih aralığına göre filtre, önceliğe göre filtre ve bir arama kutusu (görev adına veya ID’sine göre arama) sağlanmalı. Bu kontroller kullanıcıya tanıdık olacak şekilde formlar ve açılır menülerle sunulmalı.
+Sıralama: Tablo başlıklarına tıklayarak görevlere göre sıralama yapılabilmeli (ID sırası, tarih sırası, öncelik sırası vb.). Bu, özellikle çok görev varsa kullanılabilirliği artırır.
+Tasarım Detayları: Tablo çizgileri çok belirgin olmamalı; satır arka planları zebra şeritli hafif gri tonlarda olabilir. Her durumun renk kodlu etiketleri (badge) olacak: Örneğin Açık – kırmızı kenarlıklı beyaz etiket, Devam Ediyor – turuncu, Tamamlandı – yeşil arka planlı etiket gibi. Bu renkler belirlenmiş durum renk paletine uygun seçilecek.
+Görev Ekle Butonu: Sayfanın görünür bir yerinde (muhtemelen üst sağ köşede) "Yeni Görev Oluştur" butonu bulunur. Bu buton birincil renkte (+ ikonu ile birlikte) olur ve tıklandığında yeni görev oluşturma formunu açar (muhtemelen ayrı bir sayfa veya modal).
+Sayfalandırma: Görev sayısı çok olursa, listenin altında sayfalandırma kontrolü (1,2,3… şeklinde) veya "Daha fazla yükle" butonu olmalı. Sayfalandırma numaraları yeterince büyük ve tıklanabilir olmalı; aktif sayfa farklı renkle belirtilecek.
+Rol Bazlı İçerik: Eğer diğer kullanıcılar (yönetici vs.) bu sayfayı kullanırsa, onlar tüm saha personellerinin görevlerini de görebilir. Bu durumda sayfada ek bir filtre (personel adına göre) veya grup görünümü gerekebilir. Tasarım buna genişleyebilecek esneklikte tutulur.
+Görev Detay Sayfası
+Amaç: Seçilen bir görevin tüm ayrıntılarını görüntüleme ve güncelleme imkanı verme. Saha personeli buradan görevi tamamladığında not girebilir, verileri inceleyebilir.
+Genel Düzen: Sayfanın başında görev başlığını büyük ve belirgin şekilde gösteriyoruz (örn. "Görev #ID: Marmara Denizi Ölü Balık İhbarı"). Başlığın altında görev durumunu gösteren bir etiket (badge) ve belki öncelik rengiyle küçük bir ikon olabilir.
+Görev Bilgileri: Bir bilgi paneli şeklinde, göreve ait tüm detay alanları listelenir:
+Açıklama: Görevin tam açıklaması, ne yapılması gerektiği.
+Konum: Metin olarak adres veya koordinat. Yanında "Haritada Göster" linki veya mini bir harita görüntüsü (örneğin haritanın küçük bir ön izlemesi, üzerine tıklayınca büyük harita açılır).
+Oluşturulma Tarihi ve Son Tarih: Görevin ne zaman açıldığı ve bitmesi gereken zaman.
+Atanan Kişi(ler): İlgili saha personeli isimleri (bu sizseniz vurgulanır). Belki atayan kişi adı da verilebilir.
+Durum: Açık/Devam/Tamamlandı vb. Bu bir dropdown olarak gösterilebilir, böylece kullanıcı durumu değiştirebilir.
+Öncelik: Düşük/Orta/Yüksek şeklinde gösterim (ikon veya renk ile).
+Görev Aksiyonları: Bu sayfada saha personelinin yapabileceği işlemler için butonlar bulunur:
+Durum Güncelleme: Örneğin "Görevi Başlat" (durumu "Devam" yapar) veya "Tamamla" (durumu "Tamamlandı" yapar) butonları. Bu butonlar görevin mevcut durumuna göre görünür olacak. Birincil renkli buton önemli eylem için (örn. Tamamla), ikincil stil buton ise iptal veya geri dönüş için kullanılabilir.
+Not Ekle / Rapor Ver: Görev yapıldıktan sonra saha personeli not girecekse bir metin alanı ve "Kaydet" butonu sunulur. Bu sayede örneğin "Temizlik yapıldı, fotoğraflar eklendi" gibi bir rapor eklenebilir.
+Fotoğraf/Belge Yükle: Gerekiyorsa kanıt fotoğrafı veya doküman eklemek için bir yükleme alanı veya buton.
+Haritada Gör: Konum önemliyse ayrı bir "Haritada Aç" butonu ile tam ekran harita görünümü sağlanabilir.
+Düzen ve Tasarım: Bilgi alanları iki sütunlu bir kart içinde düzenlenebilir (sol sütunda açıklama, konum, tarihler; sağ sütunda atanan kişi, durum, öncelik vb.) Böylece geniş ekran alanı verimli kullanılır. Alan etiketleri (örn. "Açıklama:", "Konum:") kalın yazılacak, karşısında değer normal yazı ile aynı satırda gösterilecek. Bu biçim, kullanıcının hızlı taramasını sağlar.
+Form Stili: Durum değiştirme, not ekleme gibi alanlar form elemanları olduğundan, tutarlı şekilde stilize edilir (metin kutuları köşeleri hafif yuvarlatılmış, kenarlık rengi nötr gri; odaklandığında kenarlık birincil renge döner). "Kaydet" veya "Güncelle" butonları ikincil renkte veya birincil renkte olabilir (işlemin önemine göre). İptal/geri butonu varsa düz gri veya sadece kenarlık şeklinde gösterilir.
+Hata ve Onay Mesajları: Kullanıcı bir değişiklik yaptığında başarılı işlem yeşil bir uyarıyla ("Görev başarıyla güncellendi") ekranda belirecek. Eğer bir hata olursa kırmızı uyarı belirecek. Bu mesajlar sayfanın üst kısmında ya da ilgili form alanının yanında gösterilmeli.
+Navigasyon: Görev detaydan geri dönmek için sayfanın görünen bir yerinde "← Görev Listesine Dön" linki veya butonu olmalı. Kullanıcı detayları inceledikten sonra kolayca listeye geri dönebilmeli.
+Raporlar (Analiz) Sayfası
+Amaç: Sistemden toplanan verilerin yöneticiler veya ilgili kullanıcılar tarafından analiz edilebilmesini sağlamak. Saha personeli de kendi performansını veya ilgi alanına giren istatistikleri burada görebilir.
+İçerik: Bu sayfa, grafikler ve istatistiksel veriler içerir. Örneğin:
+Zaman Serisi Grafiği: Belirli bir dönemdeki olay sayıları (günlük/haftalık kirlilik tespit grafiği).
+Dağılım/Pasta Grafikleri: Görev türlerine göre dağılım, önceliklere göre görev dağılımı, sonuçlara göre (başarılı müdahale vs başarısız) oranlar vb.
+KPI Kartları: Önemli metriklerin özet kutucukları. Örneğin: "Bu ay tespit edilen olay sayısı", "Ortalama müdahale süresi", "Tamamlanma oranı" gibi göstergeler.
+Filtreler: Raporlar sayfasında, istenen tarih aralığını seçmek için bir tarih seçici, ve/veya hangi veri setinin görüneceğini seçmek için seçenekler olabilir (örn. belirli bölgeyi filtreleme, belirli tür olayları filtreleme). Bu filtreler sayfanın üstünde yatay bir şerit üzerinde sunulabilir.
+Tasarım ve Renkler: Grafikler, uygulamanın renk paletine uygun renklere sahip olacak. Örneğin birincil renk grafik sütunlarında veya çizgilerinde kullanılır, ikincil renk ikinci bir veri serisi için, vurgu renkleri önemli noktaları belirtmek için (örn. kritik eşik aşıldığında kırmızı nokta) kullanılır. Arka plan yine beyaz, grafik kartları hafif gölgeli kutular şeklinde tasarlanır.
+Etkileşim: Grafiklerin köşesinde pdf/xls indirme ikonları veya detay butonu olabilir, böylece yönetici raporu dışa aktarabilir. Kullanıcı grafiğin üzerine geldiğinde değer detayları gösteren tooltip'ler belirecek (bu interaktif davranışı tasarım notu olarak ekliyoruz; uygulamada JS ile sağlanır, ama tasarım aşamasında yerleri planlanır).
+Yazı Stili: Grafik başlıkları ve eksen yazıları okunaklı olmalı (12-14px arası). Her grafik altında açıklayıcı bir not gerekirse 12px gri metinle verilebilir.
+Boş Durum: Eğer veri yoksa veya filtre sonucu boş çıkarsa, sayfa ortasında gri ikon ve "Veri bulunamadı" mesajı gösterilmeli. Bu da arayüzün parçası olarak düşünülmeli (yani sadece boş beyaz sayfa bırakmamalı, kullanıcıya durum iletilmeli).
+Profil & Ayarlar Sayfası
+Amaç: Kullanıcının kendi hesap bilgilerini görüntüleyip düzenleyebileceği, tercihler ayarlarını yapabileceği alandır. Saha personeli için örneğin iletişim bilgilerini güncellemek veya şifre değiştirmek bu sayfadan yapılacaktır.
+Profil Bilgileri: Kullanıcının adı, soyadı, e-posta adresi, telefon numarası gibi bilgiler metin kutularında gösterilir. Varsayılan olarak düzenlenemez formda da olabilir, "Düzenle" düğmesine basınca düzenlenebilir hale gelir. Her alanın yanında ilgili ikonlar olabilir (telefon ikonu, e-posta ikonu vs. görsel destek için).
+Şifre Değiştirme: Profil sayfasında ayrı bir bölüm ya da modal ile "Şifre Değiştir" işlevi sunulur. Kullanıcı mevcut şifresini ve yeni şifresini girebileceği alanlar doldurup kaydedebilir. Bu kısım güvenlik açısından önemli, bu yüzden hata durumları net mesajlar verecek (ör. "Mevcut şifre yanlış", "Yeni şifre en az 8 karakter olmalı" gibi).
+Tercihler: Eğer uygulamada tema seçimi (açık/koyu mod) veya bildirim tercihleri gibi ayarlar varsa, bunlar da burada sunulur. Örneğin "E-posta ile bildirim almak istiyorum" şeklinde bir onay kutusu veya "Dil: Türkçe/İngilizce" seçim menüsü vb.
+Kaydet Butonu: Kullanıcı bilgilerinde değişiklik yapınca, sayfanın altında "Güncelle" şeklinde bir buton aktif hale gelir. Bu buton birincil renkte olmalı ve tıklanınca değişikliklerin kaydedildiğine dair yukarıda yeşil bir onay mesajı gösterilmeli.
+Tasarım: Profil sayfası bir form yapısında olduğu için düzen basit ve tek sütun olabilir (mobil uyumluluk için de iyi olur). Her form alanı altında küçük gri yazıyla açıklama verilebilir (örn. "Telefon numaranızı başında 0 olmadan giriniz"). Alan etiketleri tutarlı bir şekilde üstte hizalı ve kalın olarak devam etmeli, form alan genişlikleri eşit olmalı ki sayfa düzenli gözüksün.
+Avatar: Eğer kullanıcı profil fotoğrafı kullanıyorsa, sayfanın üstünde yuvarlak bir avatar görseli ve yanında "Fotoğrafı Değiştir" linki olabilir. Kurumsal sistemlerde belki sabit bir avatar (isim baş harfleri) kullanılıyor da olabilir. Bu opsiyonel bir detay.
+(Not: “Profil” ve “Ayarlar” sayfaları içerik açısından ayrılabilir de. Örneğin Profil sadece görüntüleme, Ayarlar ayrı sayfada. Ancak kapsamımızda bunları birleştiriyoruz. Diğer kullanıcı rolleri (yönetici vs.) için ayrı bir “Yönetim Paneli” gerekirse benzer tasarım ilkeleriyle eklenebilir.)
+6. Arayüz Bileşenleri ve Form Elemanları
+Bu bölüm, uygulamanın genelinde kullanılacak ortak arayüz bileşenlerinin stil ve davranışlarını tanımlar. Tüm komponentlerin tasarımı, tutarlı bir kullanıcı deneyimi sunmak için uyum içinde olmalıdır
+sirius.com.tr
+. Saha personeli gibi kullanıcılar için basit ve tanıdık bileşenler kullanmak önemlidir
+sirius.com.tr
+. Aşağıda butonlar, formlar, ikonlar gibi temel bileşenler ele alınmıştır:
+Butonlar: Uygulamada farklı önem düzeylerinde butonlar olacaktır. Üç temel buton stili tanımlıyoruz:
+Birincil Buton: Ana eylemler için (form gönderme, kaydetme gibi) kullanılan butonlar. Renk paletindeki birincil renk ile dolu arkaplan, üzerinde beyaz veya çok açık renkli metin kullanılır. Köşeler hafif yuvarlatılmış (ör. 4px radius) olup modern bir görünüm sağlanır. Üzerine gelindiğinde (hover) rengin biraz daha koyusu veya parlak tonu ile görsel geri bildirim verilir, tıklandığında (active) kısa süreli basık görünüm (shadow azalması) olur. Örnek: <button class="primary">Kaydet</button>.
+İkincil Buton: Daha az öncelikli veya alternatif eylemler için. Tipik olarak beyaz arkaplan üzerine birincil renkli kenarlık ve metinle tasarlanır (outline style). Hover olduğunda birincil renkyle hafif doldurgu alabilir veya metin rengi koyulaşır. Örneğin "İptal" butonu ikincil stil olabilir. Bu sayede arayüzde çok sayıda dikkat çekici renkli buton yerine, yalnızca en önemli işlem vurgulanır, diğerleri geri planda kalır.
+Tehlike Butonu: Silme gibi geri dönüşü zor veya kritik işlemler için kırmızı tonlu özel bir stil. Arkaplanı açık kırmızı, metni beyaz olabilir ya da outline olarak kırmızı metinli. Örneğin "Sil" butonu. Bu butonlar az kullanılacak şekilde tasarımda yer alır ve kullanıcıyı uyarmak için rengiyle hemen ayırt edilir.
+Boyutlar: Butonlar en az 40px yükseklikte olmalı (tıklanabilirlik için). İç yataklama (padding) sağ-sol 16px, üst-alt 8-10px gibi verilir ki metin etrafında yeterli boşluk olsun. Font boyutu genelde 14px-16px aralığında, buton metinleri mümkün olduğunca kısa ve eylemi tanımlayan (örn. "Gönder", "İptal", "Sil").
+İkonlu Butonlar: Eğer buton üzerinde bir ikon varsa (örn. Ekle butonu yanında "+" ikonu), ikon ile metin arasında biraz boşluk bırakılır. İkon boyutu metin yüksekliğine uygun olmalı (~16px) ve buton rengine göre renk almalı (birincil butonda beyaz ikon gibi).
+Form Alanları: Tüm giriş kutuları (input, textarea, select) için tutarlı bir stil uygulanacak:
+Metin Kutuları: Kenarlıkları yuvarlatılmış dikdörtgen (radius ~4px), kenar çizgi rengi başlangıçta gri (#ccc gibi). İçeride placeholder metin varsa gri italik görünecek. Odaklanınca (focus) kenar çizgi rengi birincil renge döner ve hafif bir gölge belirir, böylece kullanıcı aktif alanı kolayca ayırt eder.
+Etiketler: Her giriş alanının üstünde veya solunda, ne bilgisi istendiğini açıkça belirten etiket olmalı. Etiketler kısa ve öz ("Adınız", "Şifre", "Görev Açıklaması" gibi) yazılır. Tercihen alanın üstünde ve soluna yaslı olarak kullanılacak (üstte olması mobil uyum ve tutarlılık açısından daha iyi). Etiket fontu 14px, yarı kalın olabilir.
+Yardım Metni: Gerekli alanların altında küçük punto ile ek açıklama verilebilir (örn. "Şifre en az 8 karakter olmalı"). Bu metin 11-12px gri yazılır ve kullanıcıya ipucu verir.
+Zorunlu Alan Göstergesi: Eğer bazı form alanları zorunlu ise, etiket yanında kırmızı bir yıldız (*) konularak belirtilir. Alternatif olarak kullanıcı gönderdiğinde boş bırakırsa o alanın altına kırmızı "Bu alan gereklidir" mesajı gösterilir.
+Seçim (Dropdown) Menüler: Stil olarak metin kutularına benzer kenarlık kullanacak. Seçili değeri ve sağ tarafta bir aşağı ok ikonu içerir. Liste açıldığında seçenkeler arka planı beyaz, hover rengi hafif gri, seçili olanı birincil renkle işaretli gösterilir.
+Onay Kutusu ve Radio: Varsayılan kutucuklar yerine özel stil kullanılabilir: Örneğin birincil renkte tik işaretli kare onay kutuları veya daire radyo düğmeleri. Etiketlerine tıklanınca da aktif olmaları sağlanır. Seçili olduğunda dolu bir ikon (✔) ve birincil renk arkaplan görünür.
+İkonlar ve Grafik Öğeler: Arayüzde kullanılacak tüm ikon seti uyumlu bir stilde olmalı. Material Icons veya Font Awesome gibi tutarlı bir ikon kütüphanesi kullanılabilir. Kurumsal bir görünüm için düz (flat) tasarım ikonlar tercih edilecek (çok detaylı/renkli olmayan, tek renk vektörel ikonlar). İkon rengi, yanında bulunduğu metnin veya butonun rengine göre belirlenir:
+Örneğin menü ikonları beyaz (koyu navbar üzerinde), form içi ikonlar gri, uyarı ikonları kırmızı/ turuncu gibi. Önemli olan, aynı anlama gelen ikonun uygulama genelinde aynı görünüme sahip olması (tutarlılık). Örneğin tüm "düzenle" işlemleri için kalem ikonu kullanılıyorsa, her yerde aynı kalem ikonu stile sahip olacak.
+İkon boyutları: Metin satırı içinde ise 16px civarı, bağımsız buton içinde ise 20-24px olabilir.
+Tablolar: Görev listesi gibi sayfalarda tablo kullanıldığında, tabloların stil rehberi de olmalı:
+Başlık satırı arkaplanı hafif daha koyu bir gri ton ile vurgulanacak. Yazılar bold ve biraz daha küçük (12-14px) tutulabilir, hepsi büyük harf yaparak başlıklar belirginleştirilebilir (örn. "ÖNCELİK", "DURUM").
+Çizgiler: Yatay satır ayracı çizgiler %80 opaklıkta gri olabilir; dikey çizgiler tercihen görünmez (kolonlar arası boşluk yeterli).
+Hover efekti: Kullanıcı bir satırın üzerine geldiğinde o satırın arka planı hafif açık mavi/ gri ton ile highlight olur (tıklanabilirlik belirtmek için).
+Seçilebilir satırlar: Eğer tablo satırı seçme özelliği varsa (checkbox ile), seçili satır arka planı birincil rengin yarı saydam haliyle boyanabilir.
+Modal Pencereler: Uygulamada onay alınması gereken durumlar veya ek formlar için açılan modal (popup) pencereler de tutarlı tasarlanmalı:
+Arka plan overlay: Tüm ekranı hafif karartan (%50 opak siyah) bir örtü üzerinde ortada modal kutusu belirir.
+Modal kutu: Köşeleri hafif yuvarlatılmış beyaz bir kutu, içinde ilgili içerik. Başlık kısmı üstte yarı kalın bir yazıyla bulunur. Sağ üst köşede kapatma (X) butonu vardır.
+İçerik: Modal içeriğinde açıklama sorusu veya form neyse o yer alır. Butonlar genelde modal altına hizalı: sağ altta "Onayla" (birincil renkte), solunda "Vazgeç" (gri ikincil buton) gibi.
+Örnek kullanım: "Görevi silmek istediğinize emin misiniz?" şeklinde bir onay modali, kırmızı bir uyarı ikonu ile birlikte gösterilebilir. Mesaj açık, butonlar net olmalı ("Sil [kritik]" ve "İptal").
+Bildirim/Banner: Uygulama genelinde üstte veya sayfa içinde bazı bilgilendirme bannerları olabilir (örn. bakım uyarısı). Bu bannerlar sayfanın en üstünde renkli şerit halinde görünebilir:
+Örneğin, sarı arka planlı bir info banner: "Yarın 12:00-13:00 arasında sistem bakımı olacaktır." gibi. Metin merkezlenmiş 14px.
+Kapatma imkanı için banner içinde küçük bir kapat (X) ikonu sağlanabilir.
+Tüm bu bileşenler, tek bir tasarım sistemi anlayışıyla uyumlu olarak hazırlanmıştır. Renk paleti, tipografi ve stil tutarlılığı sayesinde kullanıcı arayüzü genelinde bir bütünlük sağlanacak, böylece kullanıcılar farklı sayfalarda benzer öğeleri tanıyıp kolaylıkla kullanabilecektir
+sirius.com.tr
+sirius.com.tr
+. Ayrıca tasarım sürecinin her adımında basitlik gözetildiğinden, arayüz gereksiz detaylardan arındırılmış, kullanıcıyı amaçlarından saptırmayan bir deneyim sunacaktır
+sirius.com.tr
+.
+Sonuç ve Yol Haritası: Bu tasarım planı, kurumsal uygulamamızın arayüzünü adım adım profesyonel bir yaklaşımla ele almıştır. Bundan sonraki adım, bu tasarım yönergelerine uygun olarak arayüzün prototipini oluşturmak ve gerçek kullanıcı senaryolarıyla test etmektir. Gerekli durumlarda saha personelinden erken geri bildirim almak, tasarımın kullanılabilirliğini arttıracaktır. Ardından frontend teknolojileri (daha önce belirlediğimiz teknolojiler) kullanılarak bu tasarımın hayata geçirilmesi ve son olarak backend entegrasyonunun yapılması planlanmıştır.
+Bu yol haritasıyla ilerlersek, ortaya çıkan ürün dünyanın en iyi tasarım ekiplerinin elinden çıkmışçasına profesyonel, tutarlı ve kullanıcı dostu bir arayüz olacaktır. 🎨👍 Kaynaklar: Basitlik, tutarlılık gibi tasarım ilkeleri için Sirius Interactive’in arayüz prensipleri rehberi temel alınmıştır
+sirius.com.tr
+sirius.com.tr
+sirius.com.tr
+. Renk paleti seçimlerinde ise UI tasarımında renk kullanımıyla ilgili sektör standartları ve anlamları göz önünde bulundurulmuştur
+selmancom.medium.com
+selmancom.medium.com
+.
+Alıntılar
+
+Websitesinde Arayüz Tasarımının Önemi
+
+https://www.sirius.com.tr/blog/websitesinde-arayuz-tasariminin-onemi
+
+Websitesinde Arayüz Tasarımının Önemi
+
+https://www.sirius.com.tr/blog/websitesinde-arayuz-tasariminin-onemi
+
+Arayüz tasarımında renkler nasıl kullanılır? | by Selman Ay | Medium
+
+https://selmancom.medium.com/aray%C3%BCz-tasar%C4%B1m%C4%B1nda-renkler-nas%C4%B1l-kullan%C4%B1l%C4%B1r-c6eef76b0e46
+
+Arayüz tasarımında renkler nasıl kullanılır? | by Selman Ay | Medium
+
+https://selmancom.medium.com/aray%C3%BCz-tasar%C4%B1m%C4%B1nda-renkler-nas%C4%B1l-kullan%C4%B1l%C4%B1r-c6eef76b0e46
+
+Arayüz tasarımında renkler nasıl kullanılır? | by Selman Ay | Medium
+
+https://selmancom.medium.com/aray%C3%BCz-tasar%C4%B1m%C4%B1nda-renkler-nas%C4%B1l-kullan%C4%B1l%C4%B1r-c6eef76b0e46
+
+Arayüz tasarımında renkler nasıl kullanılır? | by Selman Ay | Medium
+
+https://selmancom.medium.com/aray%C3%BCz-tasar%C4%B1m%C4%B1nda-renkler-nas%C4%B1l-kullan%C4%B1l%C4%B1r-c6eef76b0e46
+
+Websitesinde Arayüz Tasarımının Önemi
+
+https://www.sirius.com.tr/blog/websitesinde-arayuz-tasariminin-onemi
+
+UI design principles: guidelines - Justinmind
+
+https://www.justinmind.com/ui-design/principles
+
+UI design principles: guidelines - Justinmind
+
+https://www.justinmind.com/ui-design/principles
+Tüm Kaynaklar
+
+sirius.com
+
+selmancom.medium
+
+justinmind
+
+
+************************************yol haritası*******************************
+
+ECO MARINE AI PROJESİ - DETAYLI GELİŞTİRME YOL HARİTASI
+================================================================
+
+Bu yol haritası, yukarıdaki tasarım dokümanındaki tüm detayları adım adım uygulanabilir görevlere dönüştürür. Her aşama, dokümandaki tasarım prensiplerine uygun olarak geliştirilecektir.
+
+AŞAMA 1: PROJE KURULUMU VE TEKNOLOJİ STACK
+===========================================
+
+1.1 Proje Klasör Yapısı Oluşturma
+- /src/components (React bileşenleri)
+- /src/pages (Sayfa bileşenleri)
+- /src/styles (CSS/SASS dosyaları)
+- /src/assets (Görseller, ikonlar)
+- /src/utils (Yardımcı fonksiyonlar)
+- /public (Statik dosyalar)
+
+1.2 Teknoloji Stack Kurulumu
+- React 18+ (Modern component yapısı)
+- Tailwind CSS (Hızlı styling)
+- React Router (Sayfa yönlendirme)
+- Chart.js (Raporlar için grafikler)
+- React Hook Form (Form yönetimi)
+- Axios (API istekleri)
+
+1.3 Geliştirme Ortamı
+- Vite (Hızlı build tool)
+- ESLint + Prettier (Kod kalitesi)
+- Git repository kurulumu
+
+AŞAMA 2: TASARIM SİSTEMİ GELİŞTİRME
+===================================
+
+2.1 Renk Paleti CSS Değişkenleri
+```css
+:root {
+  /* Birincil Renkler */
+  --primary-color: #1E5A7D;
+  --primary-light: #2A6B8A;
+  --primary-dark: #154A63;
+  
+  /* İkincil Renkler */
+  --secondary-color: #3A847C;
+  --secondary-light: #4A9A8F;
+  --secondary-dark: #2D6B61;
+  
+  /* Vurgu Renkleri */
+  --accent-orange: #E67E22;
+  --accent-red: #E74C3C;
+  
+  /* Nötr Renkler */
+  --background-light: #F9F9F9;
+  --text-dark: #333333;
+  --text-light: #666666;
+  --border-color: #E0E0E0;
+  
+  /* Durum Renkleri */
+  --success-color: #28a745;
+  --warning-color: #FFC107;
+  --error-color: #DC3545;
+}
+```
+
+2.2 Tipografi Sistemi
+- Google Fonts: Roboto (Türkçe karakter desteği)
+- Font boyutları: 12px, 14px, 16px, 18px, 20px, 24px
+- Font ağırlıkları: 400 (normal), 600 (semi-bold), 700 (bold)
+- Satır yüksekliği: 1.5 (150%)
+
+2.3 Temel Bileşen Stilleri
+- Button component (primary, secondary, danger)
+- Input component (text, email, password, select)
+- Card component (gölgeli kutular)
+- Modal component (popup pencereler)
+- Badge component (durum etiketleri)
+
+AŞAMA 3: LAYOUT BİLEŞENLERİ GELİŞTİRME
+======================================
+
+3.1 Header/Navigation Bileşeni
+- Logo ve uygulama adı (sol üst)
+- Ana menü öğeleri:
+  * Ana Sayfa (Dashboard)
+  * Görevlerim (öncelikli)
+  * Raporlar
+  * Harita (opsiyonel)
+  * İletişim/Destek
+- Bildirim ikonu (sağ üst, kırmızı sayaç ile)
+- Kullanıcı profil menüsü (Profilim, Ayarlar, Çıkış Yap)
+- Responsive hamburger menü
+
+3.2 Footer Bileşeni
+- Kurumsal kimlik ve telif hakkı
+- İletişim bilgileri (adres, telefon, e-posta)
+- Hızlı linkler (Hakkında, Yardım, Gizlilik Politikası)
+- Logo (monochrome versiyon)
+
+3.3 Genel Layout Yapısı
+- Header (sabit üst)
+- Main content (esnek orta)
+- Footer (sabit alt)
+- Sidebar (opsiyonel, dar ekranlarda gizli)
+
+AŞAMA 4: GİRİŞ SAYFASI GELİŞTİRME
+=================================
+
+4.1 Giriş Formu Tasarımı
+- Ortalanmış form konteyneri
+- Şirket logosu (büyük boyut)
+- "Hoş geldiniz" mesajı (gri ton)
+- Kullanıcı Adı/E-posta input alanı
+- Şifre input alanı
+- "Beni Hatırla" checkbox
+- "Şifremi Unuttum" linki (birincil renkte)
+
+4.2 Form Validasyonu
+- Boş alan kontrolü
+- E-posta format kontrolü
+- Şifre minimum karakter kontrolü
+- Hata mesajları (kırmızı, anlaşılır)
+- Başarılı giriş yönlendirmesi
+
+4.3 Güvenlik Özellikleri
+- CSRF token
+- Rate limiting (brute force koruması)
+- Güvenli şifre hash'leme
+- Oturum yönetimi
+
+AŞAMA 5: DASHBOARD (ANA SAYFA) GELİŞTİRME
+==========================================
+
+5.1 Kişiselleştirilmiş Karşılama
+- "Hoş geldin, [Kullanıcı Adı]!" başlığı
+- Günlük mesaj veya motivasyonel içerik
+- Son giriş tarihi bilgisi
+
+5.2 Özet Kartları
+- Aktif Görevlerim Kartı:
+  * Toplam açık görev sayısı
+  * Yüksek öncelikli görev sayısı
+  * Yaklaşan son tarihler
+  * "Tüm görevlerimi gör" linki
+
+- Bildirimler/Raporlar Kartı:
+  * Son gelen bildirimler
+  * Sistem güncellemeleri
+  * Acil durum uyarıları
+
+- İstatistik Kartları:
+  * Bu ay tamamlanan görevler
+  * Ortalama müdahale süresi
+  * Başarı oranı yüzdesi
+
+5.3 Harita Özeti Modülü
+- Küçük harita görünümü
+- Son raporlanan konumlar (noktalar)
+- Cihaz konumları
+- "Haritada Detaylı Gör" butonu
+
+5.4 Hızlı Erişim Butonları
+- "Yeni Görev Başlat" (büyük, birincil renk)
+- "Rapor Oluştur" (büyük, ikincil renk)
+- "Acil Durum Bildir" (büyük, kırmızı)
+
+AŞAMA 6: GÖREV LİSTESİ SAYFASI GELİŞTİRME
+==========================================
+
+6.1 Liste Görünümü
+- Tablo formatında görev listesi
+- Sütunlar: ID, Açıklama, Konum, Öncelik, Durum, Son Tarih
+- Satır hover efekti (hafif gri highlight)
+- Tıklanabilir satırlar (detay sayfasına yönlendirme)
+
+6.2 Filtreleme Sistemi
+- Durum filtresi (Açık, Devam, Tamamlandı)
+- Öncelik filtresi (Düşük, Orta, Yüksek)
+- Tarih aralığı filtresi
+- Arama kutusu (görev adı/ID)
+- "Filtreleri Temizle" butonu
+
+6.3 Sıralama Özellikleri
+- Tablo başlıklarına tıklayarak sıralama
+- ID, tarih, öncelik sıralaması
+- Artan/azalan sıralama seçenekleri
+- Aktif sıralama göstergesi
+
+6.4 Sayfalandırma
+- Sayfa numaraları (1, 2, 3...)
+- Sayfa başına görev sayısı seçimi
+- "Önceki/Sonraki" butonları
+- Toplam görev sayısı gösterimi
+
+6.5 Görev Ekleme
+- "Yeni Görev Oluştur" butonu (üst sağ)
+- Modal form veya ayrı sayfa
+- Zorunlu alanlar: Başlık, Açıklama, Konum, Öncelik
+- Dosya ekleme özelliği
+
+AŞAMA 7: GÖREV DETAY SAYFASI GELİŞTİRME
+========================================
+
+7.1 Görev Bilgi Paneli
+- Görev başlığı (büyük, belirgin)
+- Durum etiketi (renk kodlu badge)
+- Öncelik göstergesi (ikon + renk)
+- Oluşturulma ve son tarih bilgileri
+
+7.2 Detaylı Bilgi Alanları
+- Açıklama (tam metin)
+- Konum bilgisi + "Haritada Göster" linki
+- Atanan kişi(ler) listesi
+- Atayan kişi bilgisi
+- İlgili dosyalar ve fotoğraflar
+
+7.3 Aksiyon Butonları
+- Durum Güncelleme:
+  * "Görevi Başlat" (Açık → Devam)
+  * "Görevi Tamamla" (Devam → Tamamlandı)
+  * "Görevi İptal Et" (herhangi → İptal)
+
+- Not Ekleme:
+  * Metin alanı (çok satırlı)
+  * "Not Kaydet" butonu
+  * Geçmiş notlar listesi
+
+- Dosya İşlemleri:
+  * Fotoğraf yükleme
+  * Belge ekleme
+  * Mevcut dosyaları görüntüleme
+
+7.4 Harita Entegrasyonu
+- Tam ekran harita görünümü
+- Konum işaretleme
+- Yakınlaştırma/uzaklaştırma
+- Konum koordinatları gösterimi
+
+AŞAMA 8: RAPORLAR SAYFASI GELİŞTİRME
+=====================================
+
+8.1 Grafik Bileşenleri
+- Zaman Serisi Grafiği:
+  * Günlük/haftalık olay sayıları
+  * Chart.js Line Chart kullanımı
+  * Tarih aralığı seçimi
+
+- Dağılım Grafikleri:
+  * Görev türlerine göre pasta grafik
+  * Önceliklere göre bar grafik
+  * Sonuçlara göre oranlar
+
+8.2 KPI Kartları
+- Bu ay tespit edilen olay sayısı
+- Ortalama müdahale süresi
+- Tamamlanma oranı yüzdesi
+- Başarılı müdahale oranı
+- Aktif görev sayısı
+
+8.3 Filtreleme Seçenekleri
+- Tarih aralığı seçici
+- Bölge filtresi (dropdown)
+- Olay türü filtresi
+- Personel filtresi (yöneticiler için)
+
+8.4 Export Özellikleri
+- PDF rapor indirme
+- Excel veri export
+- Grafik görsel indirme
+- Özelleştirilebilir rapor formatları
+
+AŞAMA 9: PROFİL VE AYARLAR SAYFASI GELİŞTİRME
+==============================================
+
+9.1 Profil Bilgileri
+- Kullanıcı adı, soyadı
+- E-posta adresi
+- Telefon numarası
+- Departman/rol bilgisi
+- Profil fotoğrafı (avatar)
+
+9.2 Şifre Değiştirme
+- Mevcut şifre alanı
+- Yeni şifre alanı
+- Şifre tekrar alanı
+- Şifre güçlülük göstergesi
+- Güvenlik kuralları (min 8 karakter, büyük/küçük harf, rakam)
+
+9.3 Tercih Ayarları
+- Bildirim tercihleri:
+  * E-posta bildirimleri
+  * SMS bildirimleri
+  * Push bildirimleri
+- Tema seçimi (açık/koyu mod)
+- Dil seçimi (Türkçe/İngilizce)
+- Zaman dilimi ayarı
+
+9.4 Hesap Yönetimi
+- Hesap silme seçeneği
+- Veri indirme (GDPR uyumlu)
+- Oturum geçmişi
+- Güvenlik logları
+
+AŞAMA 10: RESPONSIVE TASARIM VE OPTİMİZASYON
+=============================================
+
+10.1 Mobil Uyumluluk
+- Breakpoint'ler: 320px, 768px, 1024px, 1440px
+- Hamburger menü (mobil)
+- Touch-friendly buton boyutları (min 44px)
+- Swipe gestures (mobil harita)
+- Responsive tablo (horizontal scroll)
+
+10.2 Performans Optimizasyonu
+- Lazy loading (görseller, bileşenler)
+- Code splitting (sayfa bazlı)
+- Image optimization
+- Bundle size optimization
+- Caching stratejileri
+
+10.3 Cross-Browser Testleri
+- Chrome, Firefox, Safari, Edge
+- Mobile browsers (iOS Safari, Chrome Mobile)
+- Eski browser desteği (IE11+)
+
+10.4 Erişilebilirlik (Accessibility)
+- WCAG 2.1 AA uyumluluğu
+- Keyboard navigation
+- Screen reader desteği
+- Color contrast ratios
+- Alt text'ler (görseller için)
+
+AŞAMA 11: BACKEND ENTEGRASYONU
+===============================
+
+11.1 API Endpoint'leri
+- Authentication API (/api/auth)
+- Tasks API (/api/tasks)
+- Reports API (/api/reports)
+- Users API (/api/users)
+- Files API (/api/files)
+
+11.2 State Management
+- Redux Toolkit veya Zustand
+- API cache yönetimi
+- Error handling
+- Loading states
+
+11.3 Real-time Özellikler
+- WebSocket bağlantısı
+- Gerçek zamanlı bildirimler
+- Canlı görev güncellemeleri
+- Online/offline durumu
+
+AŞAMA 12: TEST VE KALİTE KONTROLÜ
+=================================
+
+12.1 Unit Testler
+- Jest + React Testing Library
+- Component testleri
+- Utility function testleri
+- API mock testleri
+
+12.2 Integration Testler
+- Sayfa geçiş testleri
+- Form submission testleri
+- User flow testleri
+
+12.3 End-to-End Testler
+- Cypress veya Playwright
+- Tam kullanıcı senaryoları
+- Cross-browser testleri
+
+12.4 Performance Testleri
+- Lighthouse audits
+- Core Web Vitals
+- Load testing
+- Memory leak kontrolü
+
+SONUÇ VE DEPLOYMENT
+===================
+
+Bu yol haritası tamamlandığında:
+- Profesyonel kurumsal arayüz
+- Saha personeli odaklı kullanıcı deneyimi
+- Responsive ve erişilebilir tasarım
+- Güvenli ve performanslı uygulama
+- Test edilmiş ve kaliteli kod
+
+Deployment seçenekleri:
+- Vercel (frontend)
+- Netlify (frontend)
+- AWS S3 + CloudFront
+- Docker containerization
+
+Bu yol haritası, tasarım dokümanındaki tüm detayları adım adım uygulanabilir görevlere dönüştürür ve profesyonel bir EcoMarineAI uygulaması geliştirmenizi sağlar.
