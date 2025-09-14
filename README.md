@@ -1,76 +1,101 @@
-# EcoMarineAI - Saha Personeli Yönetim Sistemi
+# EcoMarineAI - Canlı Uydu İzleme Sistemi
 
-## Proje Hakkında
+EcoMarineAI, denizlerde meydana gelen çevresel kirleticilerin erken evrede tespit edilmesini ve hızlı müdahale mekanizmalarının tetiklenmesini amaçlayan yapay zekâ destekli, bütünleşik bir izleme ve karar destek sistemidir.
 
-EcoMarineAI, deniz kirliliği izleme ve saha personeli yönetimi için geliştirilmiş kurumsal web uygulamasıdır. Saha personelinin görevlerini yönetmek, raporları analiz etmek ve çevresel verileri takip etmek için tasarlanmıştır.
+## Özellikler
 
-## Teknoloji Stack
-
-- **Frontend**: React 18 + Vite
-- **Styling**: Tailwind CSS
-- **Routing**: React Router DOM
-- **Charts**: Chart.js + React Chart.js 2
-- **Forms**: React Hook Form
-- **HTTP Client**: Axios
-- **Icons**: Lucide React
+- 🌊 **Canlı Uydu İzleme**: Gerçek zamanlı uydu görüntüleri ve analizleri
+- 🤖 **Yapay Zeka Analizi**: Otomatik kirlilik tespiti ve sınıflandırması
+- 📊 **İstatistik Dashboard**: Kirlilik seviyeleri ve trend analizleri
+- 🚨 **Erken Uyarı Sistemi**: Kritik durumlar için otomatik alarmlar
+- 📱 **Responsive Tasarım**: Mobil ve masaüstü uyumlu arayüz
+- ⚡ **Gerçek Zamanlı Güncellemeler**: WebSocket ile canlı veri akışı
 
 ## Kurulum
 
+### Frontend
+
 1. Bağımlılıkları yükleyin:
-```bash
-npm install
-```
+   ```bash
+   npm install
+   ```
 
 2. Geliştirme sunucusunu başlatın:
-```bash
-npm run dev
-```
+   ```bash
+   npm run dev
+   ```
 
-3. Tarayıcıda `http://localhost:5173` adresini açın.
+### Backend
+
+1. Backend klasörüne gidin:
+   ```bash
+   cd backend
+   ```
+
+2. Bağımlılıkları yükleyin:
+   ```bash
+   npm install
+   ```
+
+3. Backend'i başlatın:
+   ```bash
+   npm run dev
+   ```
+
+## Kullanım
+
+1. Uygulamayı başlattıktan sonra `http://localhost:5173` adresine gidin
+2. Giriş yapın (test kullanıcısı: admin/admin)
+3. "Uydu İzleme" sekmesine tıklayın
+4. "AI Analiz" butonuna tıklayarak yeni analiz başlatın
+5. Gerçek zamanlı verileri takip edin
+
+## Teknolojiler
+
+### Frontend
+- React 18
+- Vite
+- Tailwind CSS
+- Lucide React (İkonlar)
+- Axios (HTTP İstekleri)
+
+### Backend
+- Node.js
+- Express.js
+- SQLite
+- WebSocket
+- Axios (AI API Entegrasyonu)
+
+## AI Entegrasyonu
+
+Sistem, yapay zeka modülü ile entegre çalışır:
+- Uydu görüntülerini analiz eder
+- Kirlilik seviyelerini sınıflandırır
+- Risk skorları hesaplar
+- Öneriler sunar
 
 ## Proje Yapısı
 
 ```
-src/
-├── components/     # Yeniden kullanılabilir bileşenler
-├── pages/          # Sayfa bileşenleri
-├── styles/         # CSS/SASS dosyaları
-├── assets/         # Görseller, ikonlar
-├── utils/          # Yardımcı fonksiyonlar
-├── App.jsx         # Ana uygulama bileşeni
-├── main.jsx        # Uygulama giriş noktası
-└── index.css       # Global stiller
+EcoMarine/
+├── src/
+│   ├── components/          # React bileşenleri
+│   ├── pages/              # Sayfa bileşenleri
+│   ├── services/           # API servisleri
+│   └── utils/              # Yardımcı fonksiyonlar
+├── backend/                # Backend API
+│   ├── server.js          # Ana sunucu dosyası
+│   ├── database.js        # Veritabanı işlemleri
+│   └── package.json       # Backend bağımlılıkları
+└── package.json           # Frontend bağımlılıkları
 ```
 
-## Tasarım Sistemi
+## Geliştirme
 
-### Renk Paleti
-- **Birincil**: #1E5A7D (Kurumsal Mavi)
-- **İkincil**: #3A847C (Petrol Yeşili)
-- **Vurgu**: #E67E22 (Turuncu), #E74C3C (Kırmızı)
-
-### Tipografi
-- **Font**: Roboto (Google Fonts)
-- **Boyutlar**: 12px, 14px, 16px, 18px, 20px, 24px
-- **Ağırlıklar**: 300, 400, 500, 600, 700
-
-## Geliştirme Aşamaları
-
-Bu proje, detaylı tasarım dokümanına göre 12 aşamada geliştirilmektedir:
-
-1. ✅ Proje Kurulumu ve Teknoloji Stack
-2. 🔄 Tasarım Sistemi Geliştirme
-3. ⏳ Layout Bileşenleri
-4. ⏳ Giriş Sayfası
-5. ⏳ Dashboard
-6. ⏳ Görev Listesi
-7. ⏳ Görev Detayı
-8. ⏳ Raporlar
-9. ⏳ Profil/Ayarlar
-10. ⏳ Responsive Tasarım
-11. ⏳ Backend Entegrasyonu
-12. ⏳ Test ve Kalite Kontrolü
+1. Yeni özellikler için feature branch oluşturun
+2. Kod değişikliklerini test edin
+3. Pull request oluşturun
 
 ## Lisans
 
-Bu proje özel bir kurumsal uygulamadır.
+Bu proje MIT lisansı altında lisanslanmıştır.
