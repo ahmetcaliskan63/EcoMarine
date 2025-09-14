@@ -11,6 +11,7 @@ import TaskDetailPage from './pages/TaskDetailPage'
 import ReportsPage from './pages/ReportsPage'
 import ProfilePage from './pages/ProfilePage'
 import MapPage from './pages/MapPage'
+import SatelliteMonitoringPage from './pages/SatelliteMonitoringPage'
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
             {/* Layout olmadan sayfalar */}
             <Route path="/" element={<HomePage />} />
             <Route path="/login" element={<LoginPage />} />
-            
+
             {/* Korumalı sayfalar - Layout ile */}
             <Route path="/dashboard" element={
               <ProtectedRoute>
@@ -53,6 +54,11 @@ function App() {
                 <Layout><MapPage /></Layout>
               </ProtectedRoute>
             } />
+            <Route path="/satellite-monitoring" element={
+              <ProtectedRoute>
+                <Layout><SatelliteMonitoringPage /></Layout>
+              </ProtectedRoute>
+            } />
           </Routes>
         </Router>
       </AuthProvider>
@@ -61,7 +67,7 @@ function App() {
 }
 
 // Ana sayfa bileşeni
-function HomePage() {
+const HomePage = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 to-secondary-50">
       <div className="text-center max-w-2xl mx-auto px-4">
@@ -75,8 +81,8 @@ function HomePage() {
           Saha Personeli Yönetim Sistemi
         </h2>
         <p className="text-lg text-gray-500 mb-8 leading-relaxed">
-          Deniz kirliliği izleme ve saha personeli yönetimi için geliştirilmiş 
-          kurumsal web uygulaması. Çevresel verileri takip edin, görevleri 
+          Deniz kirliliği izleme ve saha personeli yönetimi için geliştirilmiş
+          kurumsal web uygulaması. Çevresel verileri takip edin, görevleri
           yönetin ve raporları analiz edin.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

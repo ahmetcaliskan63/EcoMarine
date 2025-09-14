@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
-import { User, Menu, X, MapPin, FileText, BarChart3, Home, LogOut } from 'lucide-react'
+import { User, Menu, X, MapPin, FileText, BarChart3, Home, LogOut, Satellite } from 'lucide-react'
 import NotificationDropdown from './NotificationDropdown'
 import { useAuth } from './AuthContext'
 
@@ -13,6 +13,7 @@ const Header = () => {
 
   const menuItems = [
     { path: '/dashboard', label: 'Ana Sayfa', icon: Home },
+    { path: '/satellite-monitoring', label: 'Uydu İzleme', icon: Satellite },
     { path: '/tasks', label: 'Görevlerim', icon: FileText },
     { path: '/reports', label: 'Raporlar', icon: BarChart3 },
     { path: '/map', label: 'Harita', icon: MapPin },
@@ -42,11 +43,10 @@ const Header = () => {
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={`flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
-                    isActive(item.path)
+                  className={`flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${isActive(item.path)
                       ? 'bg-primary-600 text-white'
                       : 'text-white hover:bg-primary-600'
-                  }`}
+                    }`}
                 >
                   <Icon size={18} />
                   <span>{item.label}</span>
@@ -116,11 +116,10 @@ const Header = () => {
                   <Link
                     key={item.path}
                     to={item.path}
-                    className={`flex items-center space-x-2 px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
-                      isActive(item.path)
+                    className={`flex items-center space-x-2 px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${isActive(item.path)
                         ? 'bg-primary-700 text-white'
                         : 'text-white hover:bg-primary-700'
-                    }`}
+                      }`}
                     onClick={() => setIsMenuOpen(false)}
                   >
                     <Icon size={18} />
