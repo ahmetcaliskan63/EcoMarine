@@ -98,15 +98,4 @@ const HomePage = () => {
   )
 }
 
-// DashboardPage artık ayrı dosyada
-
-// TasksPage artık ayrı dosyada
-
-// ReportsPage artık ayrı dosyada
-
-// ProfilePage artık ayrı dosyada
-
-// MapPage artık ayrı dosyada
-
-
 export default App
