@@ -1,5 +1,5 @@
 // Yapay Zeka API Servisi
-const AI_API_URL = import.meta.env.VITE_AI_API_URL || 'https://pumps-expand-unusual-terms.trycloudflare.com';
+const AI_API_URL = import.meta.env.VITE_AI_API_URL || 'https://diego-imposed-today-hearing.trycloudflare.com';
 
 class AIService {
     // Uydu görüntüsünü analiz et
