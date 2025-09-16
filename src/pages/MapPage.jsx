@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react'
 import { MapPin, Navigation, Filter, Layers, Download, RefreshCw, Map } from 'lucide-react'
 import { Wrapper, Status } from '@googlemaps/react-wrapper'
 import GoogleMap from '../components/GoogleMap'
+import WmsSlideshow from '../components/WmsSlideshow'
 
 const MapPage = () => {
   const [selectedLayer, setSelectedLayer] = useState('all')
@@ -115,6 +116,24 @@ const MapPage = () => {
     console.log('Map clicked:', event.latLng.lat(), event.latLng.lng())
   }, [])
 
+  // NASA GIBS WMTS tile overlay (GoogleMapsCompatible in EPSG:3857)
+  const gibsDate = new Date().toISOString().slice(0, 10) // YYYY-MM-DD
+  const gibsOverlay = {
+    name: 'NASA GIBS MODIS TrueColor',
+    template: `https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/MODIS_Terra_CorrectedReflectance_TrueColor/default/${gibsDate}/GoogleMapsCompatible_Level9/{z}/{y}/{x}.jpg`,
+    minZoom: 1,
+    maxZoom: 9
+  }
+
+  // Kullanıcının verdiği WMS GetMap tekil görüntü URL'leri (slideshow için)
+  const wmsImages = [
+    'https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=MODIS_Terra_CorrectedReflectance_TrueColor&STYLES=&FORMAT=image/jpeg&TRANSPARENT=FALSE&HEIGHT=768&WIDTH=1024&CRS=EPSG:4326&BBOX=20.0800,37.9700,22.0800,39.9700&TIME=2025-09-14',
+    'https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=MODIS_Terra_CorrectedReflectance_TrueColor&STYLES=&FORMAT=image/jpeg&TRANSPARENT=FALSE&HEIGHT=768&WIDTH=1024&CRS=EPSG:4326&BBOX=18.0800,39.9700,20.0800,41.9700&TIME=2025-09-14',
+    'https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=MODIS_Terra_CorrectedReflectance_TrueColor&STYLES=&FORMAT=image/jpeg&TRANSPARENT=FALSE&HEIGHT=768&WIDTH=1024&CRS=EPSG:4326&BBOX=16.0800,39.9700,18.0800,41.9700&TIME=2025-09-14',
+    'https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=MODIS_Terra_CorrectedReflectance_TrueColor&STYLES=&FORMAT=image/jpeg&TRANSPARENT=FALSE&HEIGHT=768&WIDTH=1024&CRS=EPSG:4326&BBOX=15.0800,39.9700,17.0800,41.9700&TIME=2025-09-14',
+    'https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=MODIS_Terra_CorrectedReflectance_TrueColor&STYLES=&FORMAT=image/jpeg&TRANSPARENT=FALSE&HEIGHT=768&WIDTH=1024&CRS=EPSG:4326&BBOX=14.0800,39.9700,16.0800,41.9700&TIME=2025-09-14'
+  ]
+
   const render = (status) => {
     // API Key hatası kontrolü
     if (apiKeyError) {
@@ -166,6 +185,7 @@ const MapPage = () => {
               zoom={mapZoom}
               events={filteredEvents}
               onMapClick={handleMapClick}
+              tileOverlays={[gibsOverlay]}
             />
           </div>
         )
@@ -292,9 +312,12 @@ const MapPage = () => {
                   zoom={mapZoom}
                   events={filteredEvents}
                   onMapClick={handleMapClick}
+                  tileOverlays={[gibsOverlay]}
                 />
               </div>
             </Wrapper>
+            {/* WMS Slideshow overlay */}
+            <WmsSlideshow urls={wmsImages} intervalMs={3000} title={`GIBS WMS (${wmsImages.length} görüntü)`} />
             
             {/* Son Raporlanan Konumlar */}
             <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm rounded-lg p-4 shadow-lg">

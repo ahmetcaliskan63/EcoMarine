@@ -1,8 +1,9 @@
 import React, { useEffect, useRef } from 'react'
 
-const GoogleMap = ({ center, zoom, events, onMapClick }) => {
+const GoogleMap = ({ center, zoom, events, onMapClick, tileOverlays = [] }) => {
   const mapRef = useRef(null)
   const mapInstanceRef = useRef(null)
+  const overlaysRef = useRef([])
 
   useEffect(() => {
     // Google Maps API'nin yüklendiğini kontrol et
@@ -101,6 +102,46 @@ const GoogleMap = ({ center, zoom, events, onMapClick }) => {
       mapInstanceRef.current.markers = newMarkers
     }
   }, [events])
+
+  // Tile overlays (e.g., NASA GIBS WMTS)
+  useEffect(() => {
+    if (!mapInstanceRef.current) return
+    const map = mapInstanceRef.current
+
+    // Clear previous overlays
+    if (overlaysRef.current.length) {
+      overlaysRef.current.forEach(() => {
+        map.overlayMapTypes.pop()
+      })
+      overlaysRef.current = []
+    }
+
+    if (!tileOverlays || tileOverlays.length === 0) return
+
+    tileOverlays.forEach((overlayConfig) => {
+      try {
+        const imageMapType = new window.google.maps.ImageMapType({
+          getTileUrl: (coord, zoomLevel) => {
+            const url = overlayConfig.template
+              .replace('{x}', coord.x)
+              .replace('{y}', coord.y)
+              .replace('{z}', zoomLevel)
+
+            return url
+          },
+          tileSize: new window.google.maps.Size(256, 256),
+          name: overlayConfig.name || 'Overlay',
+          minZoom: overlayConfig.minZoom ?? 0,
+          maxZoom: overlayConfig.maxZoom ?? 22
+        })
+
+        map.overlayMapTypes.push(imageMapType)
+        overlaysRef.current.push(imageMapType)
+      } catch (err) {
+        console.error('Tile overlay eklenirken hata:', err)
+      }
+    })
+  }, [tileOverlays])
 
 
   const getEventColor = (type, priority) => {

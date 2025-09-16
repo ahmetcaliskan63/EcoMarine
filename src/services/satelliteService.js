@@ -43,10 +43,26 @@ class SatelliteService {
   }
 
   // Uydu görüntüsü al (backend proxy → NASA GIBS)
-  static async getSatelliteImage(coordinates) {
+  static async getSatelliteImage(coordinates, options = {}) {
     try {
+      // URL parametrelerini oluştur
+      const params = new URLSearchParams({
+        lat: coordinates.lat,
+        lng: coordinates.lng,
+      });
+
+      // Özel BBOX parametresi varsa ekle
+      if (options.bbox) {
+        params.append('bbox', options.bbox);
+      }
+
+      // Özel TIME parametresi varsa ekle
+      if (options.time) {
+        params.append('time', options.time);
+      }
+
       const response = await fetch(
-        `${BACKEND_URL}/api/satellite-image?lat=${coordinates.lat}&lng=${coordinates.lng}&d=0.2`
+        `${BACKEND_URL}/api/satellite-image?${params.toString()}`
       );
 
       if (!response.ok) {
@@ -62,6 +78,8 @@ class SatelliteService {
         timestamp: data.timestamp,
         resolution: data.resolution,
         source: data.source,
+        bbox: data.bbox,
+        acquisition_date: data.acquisition_date,
         service_info: data.service_info,
       };
     } catch (err) {
